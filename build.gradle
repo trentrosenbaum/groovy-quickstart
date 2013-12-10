@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+group = 'com.mycompany.example'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.codehaus.groovy:groovy-all:2.0.8'
+
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+}

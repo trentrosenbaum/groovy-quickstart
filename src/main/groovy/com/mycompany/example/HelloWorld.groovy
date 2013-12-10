@@ -1,20 +1,23 @@
 package com.mycompany.example
 
+/**
+ * Simple class to ensure quick start project is working.
+ * @author Trent Rosenbaum
+ */
 public class HelloWorld {
 
-    String message
+    String name
 
     public HelloWorld(){
-        message = 'Hello World!!'
+        name = 'World'
     }
 
     public HelloWorld(String name){
-
-        message = "Hello $name!!"
+        this.name = name
     }
 
-    public String greet(){
-        return message
+    public String greeting(){
+        return "Hello $name!!"
     }
 
 }

@@ -2,7 +2,9 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
 
+archivesBaseName = 'groovy-quickstart'
 group = 'com.mycompany.example'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
     mavenCentral()

@@ -1,4 +1,4 @@
 groovy-quickstart
 =================
 
-A simple Quick start Groovy based Gradle project.
+A simple Quickstart Groovy based Gradle project.

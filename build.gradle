@@ -1,27 +1,27 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
-apply plugin:'application'
+apply plugin: 'application'
 
 
 archivesBaseName = 'groovy-quickstart'
 group = 'com.mycompany.example'
 version = '1.0.0-SNAPSHOT'
 
-mainClassName = "com.mycompany.example.HelloWorldApp"
+mainClassName = 'com.mycompany.example.HelloWorldApp'
 
 repositories {
-    mavenCentral()
+    mavenCentral ()
 }
 
 dependencies {
 
-    compile 'org.codehaus.groovy:groovy-all:2.0.8'
-    compile 'org.slf4j:slf4j-api:1.7.5'
-    runtime 'org.slf4j:slf4j-simple:1.7.5'
+    compile ('org.codehaus.groovy:groovy-all:2.0.8')
+    compile ('org.slf4j:slf4j-api:1.7.5')
+    runtime ('org.slf4j:slf4j-simple:1.7.5')
 
 
-    testCompile 'junit:junit:4.11'
+    testCompile ('junit:junit:4.11')
     testCompile ('org.spockframework:spock-core:0.7-groovy-2.0') {
         exclude module: 'groovy-all'
 
@@ -29,6 +29,6 @@ dependencies {
 
 }
 
-task wrapper(type: Wrapper){
-    gradleVersion= '1.10'
+task wrapper (type: Wrapper){
+    gradleVersion= '1.11'
 }

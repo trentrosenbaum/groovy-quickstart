@@ -1,3 +1,11 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.netflix.nebula:nebula-release-plugin:4.0.1'
+    }
+}
+apply plugin: 'nebula.nebula-release'
+
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
@@ -6,7 +14,6 @@ apply plugin: 'application'
 
 archivesBaseName = 'groovy-quickstart'
 group = 'com.mycompany.example'
-version = '1.0.0-SNAPSHOT'
 
 mainClassName = 'com.mycompany.example.HelloWorldApp'
 

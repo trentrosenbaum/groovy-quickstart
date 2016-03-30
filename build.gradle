@@ -16,7 +16,7 @@ archivesBaseName = 'groovy-quickstart'
 group = 'com.mycompany.example'
 
 nebulaRelease {
-    releaseBranchPatterns = [/nebula-example/, /master/, /HEAD/, /(release(-|\/))?\d+(\.\d+)?\.x/, /v?\d+\.\d+\.\d+/] as Set
+    releaseBranchPatterns = [/master/, /HEAD/, /(release(-|\/))?\d+(\.\d+)?\.x/, /v?\d+\.\d+\.\d+/] as Set
 }
 
 mainClassName = 'com.mycompany.example.HelloWorldApp'

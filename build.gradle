@@ -19,14 +19,7 @@ nebulaRelease {
 }
 
 group = 'com.mycompany.example'
-archivesBaseName = 'groovy-quickstart'
 mainClassName = 'com.mycompany.example.HelloWorldApp'
-
-distributions {
-    main {
-        baseName = archivesBaseName
-    }
-}
 
 repositories {
     jcenter ()

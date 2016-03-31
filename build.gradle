@@ -2,9 +2,11 @@ buildscript {
     repositories { jcenter() }
     dependencies {
         classpath 'com.netflix.nebula:nebula-release-plugin:4.0.1'
+        classpath 'com.netflix.nebula:gradle-info-plugin:3.0.4'
     }
 }
 apply plugin: 'nebula.nebula-release'
+apply plugin: 'nebula.info'
 
 apply plugin: 'java'
 apply plugin: 'groovy'
@@ -12,17 +14,22 @@ apply plugin: 'idea'
 apply plugin: 'application'
 
 
-archivesBaseName = 'groovy-quickstart'
-group = 'com.mycompany.example'
-
 nebulaRelease {
     releaseBranchPatterns = [/master/, /HEAD/, /(release(-|\/))?\d+(\.\d+)?\.x/, /v?\d+\.\d+\.\d+/] as Set
 }
 
+group = 'com.mycompany.example'
+archivesBaseName = 'groovy-quickstart'
 mainClassName = 'com.mycompany.example.HelloWorldApp'
 
+distributions {
+    main {
+        baseName = archivesBaseName
+    }
+}
+
 repositories {
-    mavenCentral ()
+    jcenter ()
 }
 
 dependencies {
@@ -35,11 +42,6 @@ dependencies {
     testCompile ('junit:junit:4.11')
     testCompile ('org.spockframework:spock-core:1.0-groovy-2.4') {
         exclude module: 'groovy-all'
-
     }
 
-}
-
-task wrapper (type: Wrapper){
-    gradleVersion= '2.11'
 }
